@@ -1,0 +1,18 @@
+\nobreakspace {}\hfill \textbf {Page}\par 
+\contentsline {section}{\numberline {1}Introduction}{4}{section.1}
+\contentsline {subsection}{\numberline {1.1}What's in a name}{4}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Characteristics in code}{4}{subsection.1.2}
+\contentsline {section}{\numberline {2}Verification model}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}Survey: Naming Java Methods}{5}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Survey setup}{5}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Method corpus}{5}{subsubsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.3}Results}{6}{subsubsection.2.1.3}
+\contentsline {subsection}{\numberline {2.2}Deducing the model}{6}{subsection.2.2}
+\contentsline {section}{\numberline {3}Acknowledgement}{7}{section.3}
+\contentsline {section}{References}{8}{section.3}
+\contentsline {section}{\numberline {A}Frequency of Java Dependencies}{9}{appendix.A}
+\contentsline {subsection}{\numberline {A.1}The Approach}{9}{subsection.A.1}
+\contentsline {subsection}{\numberline {A.2}The Results}{9}{subsection.A.2}
+\contentsline {subsection}{\numberline {A.3}The code}{10}{subsection.A.3}
+\contentsline {subsection}{\numberline {A.4}The data}{10}{subsection.A.4}
+\contentsline {section}{\numberline {B}Logbook}{12}{appendix.B}

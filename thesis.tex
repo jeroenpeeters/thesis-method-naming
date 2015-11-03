@@ -1,0 +1,93 @@
+%% Based on a TeXnicCenter-Template by Gyorgy SZEIDL.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%------------------------------------------------------------
+%
+\documentclass{article}%
+%Options -- Point size:  10pt (default), 11pt, 12pt
+%        -- Paper size:  letterpaper (default), a4paper, a5paper, b5paper
+%                        legalpaper, executivepaper
+%        -- Orientation  (portrait is the default)
+%                        landscape
+%        -- Print size:  oneside (default), twoside
+%        -- Quality      final(default), draft
+%        -- Title page   notitlepage, titlepage(default)
+%        -- Columns      onecolumn(default), twocolumn
+%        -- Equation numbering (equation numbers on the right is the default)
+%                        leqno
+%        -- Displayed equations (centered is the default)
+%                        fleqn (equations start at the same distance from the right side)
+%        -- Open bibliography style (closed is the default)
+%                        openbib
+% For instance the command
+%           \documentclass[a4paper,12pt,leqno]{article}
+% ensures that the paper size is a4, the fonts are typeset at the size 12p
+% and the equation numbers are on the left side
+%
+\usepackage{amsmath}%
+\usepackage{amsfonts}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+\usepackage{varwidth} % http://ctan.org/pkg/varwidth
+\usepackage{pgfgantt}
+\usepackage{graphicx} % http://nl.wikibooks.org/wiki/LaTeX/Figuren_en_drijvende_omgevingen
+\usepackage[hidelinks]{hyperref}
+%\usepackage{minted}
+
+
+\begin{document}
+
+% Title page
+\title{Found in practice: Strategies for naming methods}
+\author{Jeroen Peeters
+\\The University of Amsterdam}
+\date{March 17, 2014 \\\vspace*{12.5cm}\small{Die Grenzen meiner Sprache bedeuten die Grenzen meiner Welt\\--- Ludwig Wittgenstein ---}} % The limits of my language mean the limits of my world
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+% Title page2
+\begin{center}
+Master Thesis \\
+Software Engineering \\
+\vspace{1cm}
+Supervisor: dr. Alexander Serebrenik\\
+%\vspace{16cm}
+%Kim, bedankt voor je steun!
+\end{center}
+\thispagestyle{empty}
+\newpage
+
+% Abstract page
+%\begin{abstract}
+%This is a sample document which shows the most important features of the Standard
+%\LaTeX\ Journal Article class.
+%\end{abstract}
+%\newpage
+
+% Table of Contents page
+\renewcommand{\contentsname}{ \begin{center} --- Table of Contents --- \end{center}}
+\setcounter{tocdepth}{1}
+\tableofcontents
+\addtocontents{toc}{~\hfill\textbf{Page}\par}
+\newpage
+
+\include{01-intro}
+\include{01-verification-model}
+\include{99-acknowledgement}
+
+\newpage
+%\nocite{*} %to include also noncited references
+\addcontentsline{toc}{section}{References}
+\bibliography{mybib}{}
+\bibliographystyle{plain}
+
+\appendix
+
+\include{97-frequency-of-java-dependencies}
+\include{98-logbook}
+%\section{The First Appendix}
+%The appendix fragment is used only once. Subsequent appendices can be created
+%using the Section Section/Body Tag.
+
+\end{document}

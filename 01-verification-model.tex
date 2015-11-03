@@ -1,0 +1,53 @@
+\section{Verification model}
+
+\subsection{Survey: Naming Java Methods}
+
+Naming pieces of code is one of the most important tasks of a software developer. Giving a piece of code the correct name is important for understandability. But what is a correct name? Providing good quality names is generally believed to be of high importance. Though there may be some guidelines, no exact or mechanical process exists to name pieces of code. In order to understand how developers create method names, I've executed a survey among a group of peers.
+
+\subsubsection{Survey setup}
+
+The survey is executed as an online questionnaire which is filled out individually without direct supervision.
+Participants are asked to provide names for shown nameless Java methods. Together with the method implementation limited contextual information is given, such as the name of the containing class and examples of how the method is used.
+Because the number of methods that can be named by each participant can vary greatly there's no maximum number of questions. Instead, there's a time limit of thirty minutes per participant. After this time, the questionnaire will stop automatically. At any moment, the participant can pause and resume the questionnaire at a later time. 
+
+
+\subsubsection{Method corpus}
+
+
+
+% Them methods used in this survey are taken from randomly chosen from popular open source projects. From each of these projects 10 methods are randomly chosen.
+
+%\begin{itemize}
+% 	\item http://www.ohloh.net/p/tomcat
+%	\item http://www.ohloh.net/p/maven2
+%	\item http://www.ohloh.net/p/hibernate
+%	\item http://www.ohloh.net/p/log4j
+%	\item http://www.ohloh.net/p/jetty
+%	\item http://www.ohloh.net/p/findbugs
+%\end{itemize} 
+
+In order to make sure that the methods included in the survey are a representative sample I've employed the following strategy.
+The methods used in the survey are taken from open-source Java projects with a high usage frequency. In other words, which projects are depended upon the most?  See appendix \ref{appendix:frequency-of-java-dependencies} for detailed information on how the list was compiled.
+
+\begin{itemize}
+	\item JUnit
+	\item Log4J
+	\item Commons IO
+	\item Guava
+	\item Commons-lang
+	\item Mockito
+\end{itemize}
+
+In order to make sure that the methods taken from these projects are also representative I use the SIG maintainability model \cite{sigmodel}. To make sure that any degree of small \& large and simple \& complex method are selected I use the following two properties:
+
+\begin{itemize}
+	\item Complexity per unit\\
+	{\small The complexity of source code units inﬂuences the system’s changeability and its testability.}
+	
+	\item Unit size\\
+	{\small The size of units inﬂuences their analysability and testability and therefore of the system as a whole.}
+\end{itemize}
+
+\subsubsection{Results}
+
+\subsection{Deducing the model}

@@ -1,0 +1,169 @@
+@inproceedings{relevance,
+  title={Assessing the relevance of identifier names in a legacy software system},
+  author={Anquetil, Nicolas and Lethbridge, Timothy},
+  booktitle={Proceedings of the 1998 conference of the Centre for Advanced Studies on Collaborative research (CASCON'98)},
+  pages={4},
+  year={1998},
+  organization={IBM}
+ }
+
+@inproceedings{sigmodel,
+  title={A practical model for measuring maintainability},
+  author={Heitlager, Ilja and Kuipers, Tobias and Visser, Joost},
+  booktitle={Quality of Information and Communications Technology, 2007. QUATIC 2007. 6th International Conference on the},
+  pages={30--39},
+  year={2007},
+  organization={IEEE}
+}
+
+@article{deissenboeck2006concise,
+  title={Concise and consistent naming},
+  author={Deissenboeck, Florian and Pizka, Markus},
+  journal={Software Quality Journal},
+  volume={14},
+  number={3},
+  pages={261--282},
+  year={2006},
+  publisher={Springer},
+	abstract={Roughly 70{\%} of source code consists of identifiers. For comprehensibility it is of crucial importance that these identifiers are chosen consistently. Coding style guides are limited to "identifiers should be self describing". Different names used for one concept reflects misunderstanding. Even so for one name for different concepts. Code obfuscation is a prime example showing the importance of meaningful identifiers. Reading and understanding obfuscated code is a cumbersome task. Adding comments to meaningless function names is a marginal improvement, it does not improve comprehensibility in places where the function is used. Three reasons for bad naming: Identifiers can be arbitrarily chosen, Developers have limited usage about names in use, Concepts are altered or abandoned without changing identifiers. "The naming convention proposed to achieve reliable naming requires amongst others that two software artifacts with the same name should implement the same concept". The main contribution of this work is the formal model defining concise and consistent naming. A naming system is defined to be consistent when each concept is named uniquely. It means that a name cannot refer to multiple concepts, and that one concept must be reffered to by one name only. Rules for compound and and compositional names are defined. Based on these formal definitions a tool is produced.}
+}
+
+@inproceedings{host2007verbs,
+  title={The programmer's lexicon, volume I: The verbs},
+  author={H{\o}st, Einar W and {\O}stvold, Bjarte M},
+  booktitle={Source Code Analysis and Manipulation, 2007. SCAM 2007. Seventh IEEE International Working Conference on},
+  pages={193--202},
+  year={2007},
+  organization={IEEE},
+	abstract={The main contribution of the work in this paper is the establishment of a domain-neutral lexicon of verbs representing the common usages of many programmers. H{\o}st and {\O}stvold analysed Java programs to establish the meaning and typical usages of verbs. In order to be domain-neutral only the 'action-verb' of a Java method is investigated. Essentialy, the limitation is on getters, setters, finders, closers, adders, etc. In order to find (dis)similarities between methods an attribute catalogue is composed. An attribute is a property that a Java method may or may not possess. By looking at the set of attributes of a method abstractions (e.g. getter) a general pattern for getters can be concluded. When a single 'getter' method would deviate from the common pattern, it could indicate that the method is named incorrectly.}
+}
+
+@incollection{host2009phrasebook,
+  title={The Java programmer’s phrase book},
+  author={H{\o}st, Einar W and {\O}stvold, Bjarte M},
+  booktitle={Software Language Engineering},
+  pages={322--341},
+  year={2009},
+  publisher={Springer}
+}
+
+@phdthesis{host2010meaningful,
+  title={Meaningful Method Names},
+  author={H{\o}st, Einar W},
+  year={2010},
+  school={University of Oslo},
+	abstract={Computer programs are build using compositions of named abstractions. We start from tiny blocks, building up larger abstractions. The names of these abstractions however should be sound, they must represent the behaviour they abstract. Programmers lack structured support. For the computer, the names are abritrary. "Good naming strengthens the tower of abstractions". This work shows that it is feasible to creat a mechanical tool to discover "naming bugs", methods that have been improperly named. "In a sense, creating meaningful abstractions is the core programmer activity".}
+}
+
+@inproceedings{sridhara2010summary,
+  title={Towards automatically generating summary comments for java methods},
+  author={Sridhara, Giriprasad and Hill, Emily and Muppaneni, Divya and Pollock, Lori and Vijay-Shanker, K},
+  booktitle={Proceedings of the IEEE/ACM international conference on Automated software engineering},
+  pages={43--52},
+  year={2010},
+  organization={ACM},
+	numpages = {10},
+	abstract={Good comments can aid the developer with understanding of software. More often than not software systems lack source comments. The paper describes a novel way to to automatically generate descriptive method comments for Java source code. Comments are generated from the method signature and body. The technique contains two phases, (1) content selection; the process of determining which source code fragments are important enough to be included into the summary, (2) text generation; the process of transforming the code fragments into natural language texts. To identify linguistic elements in source code the method uses the Software Word Usage Model (SWUM). SWUM extracts the action, theme and secondary arguments for any given source line. Example: 'list.add(Item i)' would be captured as "Add item to list." The most important contribution of the paper is the selection of important code fragments. For this the paper puts forward a set of rules. Secondly, the paper puts forward a structured way to convert the captured source fragments to natural language texts using SWUM.}
+}
+
+@inproceedings{sridhara2011automatically,
+  title={Automatically detecting and describing high level actions within methods},
+  author={Sridhara, Giriprasad and Pollock, Lori and Vijay-Shanker, K},
+  booktitle={Software Engineering (ICSE), 2011 33rd International Conference on},
+  pages={101--110},
+  year={2011},
+  organization={IEEE},
+	abstract={In this paper Sridhara et al. propose a method to synthesize a natural language description from source code. To do this they first identify code segments that together implement an abstract action to which the developer can relate. They reason that it is easier for a developer to comprehend the code by the abstract actions in a natural language description than going through the code manually. These descriptions can also be used to document the source code. The main contribution of the paper is (1) a set of algorithms to identify code fragments that implement high level abstractions, (2) Rules for generating natural language descriptions and (3) Validation of the algorithms and rules by applying them to 1.2 million Java methods. Manual validation by 15 Java developers indicates that the methods employed by Sridhara et al. give accurate natural language descriptions for the identified high level actions. In the 'Future Work' section they highlight the possible usability of this work for generating method names.}
+}
+
+@mastersthesis{leeuwen2012nouns,
+	title={Comprehensible Method Names: Focusing on the Nouns},
+	author={van Leeuwen, Dennis},
+	school={University of Amsterdam},
+	year={2012},
+	month={July}
+}
+
+@mastersthesis{stoel2012anomalies,
+	title={Exploring the Detection of Method Naming Anomalies},
+	author={Stoel, Jouke},
+	school={University of Amsterdam},
+	year={2012},
+	month={July},
+	abstract={The central goal of the research is acquiring deeper understanding of the method naming anomalies as presented by H{\o}st and {\O}stvold. To achieve this, Stoel reproduces their work. Method naming anomalies are method implementations that differ from the intention of the method name. To acquire this data, H{\o}st and {\O}stvold look at semantic attributes of a method's implementation. By comparing the attributes of methods with the same name, outliers can be found. In the paper the term nano-pattern is used instead of semantic attribute. To obtain source code nano-patterns a software analyser is build. The first part of the paper consists of a comparison of the source-code analyser versus the byte-code analyser of Singer et al. The second part tries to answer the question whether methods as identified by the approach of H{\o}st and {\O}stvold actually have bad names. And last an alternate approach for finding method anomalies is presented using Formal Concept Analysis (FCA). This approach is then compared to the approach of H{\o}st and {\O}stvold. The scope of the research is limited to Java source code. Furthermore only the first part of a method name is taken into account. This is normally a verb or an 'action oriented' token (e.g. get, set, is, has).
+	Stoel concludes that, allthough the method is imprecise and correctness is in the eye of the beholder, the method of H{\o}st and {\O}stvold does indeed find methods with questionable method names better than randomly selecting method names from the corpus. A problem with the method of H{\o}st and {\O}stvold is that it only looks at either the presence or absence of patterns in a specific token set. A method is considered an outlier if it contains a rare pattern of does not contain a common pattern for methods with the same verb. The method does not consider combinations of patterns. Stoel tries to tackle with problem by looking at the interdependencies between the nano-patterns using FCA.
+	
+	}
+}
+
+@inproceedings{kashiwabara,
+	title={Recommending Verbs for Rename Method using Association Rule Mining},
+	author={Kashiwabara, Yuki and Onizuka, Yuya and Ishio, Takashi and Hayase, Yasuhiro and Yamamoto, Tetsuo and Inoue, Katsuro},
+	school={Osaka University, Japan and University of Tsukuba, Japan},
+	year={2014},
+	booktitle={The European Conference on Software Maintenance and Reengineering/The Working Conference on Reverse Engineering (CSMR-WCRE) 2014, Antwerp, Belgium},
+	abstract={The paper presents a new for to recommend verbs for the Rename Method refactoring using assocation rule mining. The naming association rules are extracted from a large corpus of Java methods. The rules relate verbs used in a method names with verbs used in identifiers of the method definition. The extracted rules can then be used to recommend candidate verbs for a single method. The associations are build by generating Transactions for each method M in the training data set. Nine different transaction types are distinguished. One of them is 'method-verb' which extracts a verb used in the method name. For this they use OpenNLP which is a language processing tool. Another example is the 'call' transaction. This is the name of a method directly called by M. A naming association rule is denoted by (X, v, c, s). X is the antecedent, v the consequent, c the confidence and s the support. Example taken from the paper: "if 100 methods whose verb is add and 80 of them call an addAll method in their method definitions, a naming association rule ({call:addAll},add, 0.8, 80) is extracted". The approach is evaluated by using 445 open source projects in the training data set. The collected rules are then used on two other open source projects: ArgoUML and jEdit. To see how well the approach can recommend the correct verb they checked if the approach would recommend a verb that is currently used in the program. Overall it appears that the approach would recommend the correct verb in 30{\%} of the cases. Looking at the top 10 boosts this number to around 60{\%}. To me it is unclear what is meant with 'top 10'. From this they conclude that association naming rules extracted from software projects can be used on a different project. As a side note: the extracted set of rules is not referenced in the paper.}
+}
+
+
+@book{bloch,
+	title={Effective Java, Second Edition},
+	author={Joshua Bloch},
+	year={2008},
+	publisher={Sun Microsystems, Addison-Wesley},
+	abstract={In this book Bloch lists a few naming conventions that are commonly used within the Java world. 1. Method names are formatted using the camelCase strategy. The first letter starts in lower-case, every following word starts with a capital. Multiple acronyms back-to-back follow the same rule. Example (HTTPURL versus HttpUrl). 2. Methods that perform some action are generally named with a verb or verb phrase. Example: draw or drawObject. Methods returning a boolean usually start with 'is' or 'has' followed by a noun, noun phrase or adjective. Example: isDigit, hasSiblings. Methods that return a non-boolean or attribute of the object on which they are invoked are usually named with a noun, noun phrase or a verb phrase beginning with 'get. Example: size, getTime. Starting a method with 'get' is not mandatory but prevalent if there is also a method to set the same attribute. Methods that convert the type of an object, and return an independent copy, are often of the form toType. Example: toArray. Methods that return a view of a different type are often of the form 'asType'. Example: asList. Common names for static factories are: valueOf, of, getInstance, newInstance, getType and newType.}
+}
+
+@book{martin2008clean,
+  title={Clean code: a handbook of agile software craftsmanship},
+  author={Martin, Robert C},
+  year={2009},
+  publisher={Pearson Education},
+	abstract={In programming we name everything: variables, parameters, methods, classes, files, etc.. Choosing good names takes time, but in the end it will save more. In his book Mavrtin proposes some simple rules to create good names. Rule 1. Intention revealing names; The name should answer the big questions: Why it exists, what it does and how it is used. When comments are necessary, the variable, method or class does not properly reveal its intent. Code with meaningless names (such as 'x') is a lot harder to comprehend than code where concepts have meaningful names. Rule 2. Avoid disinformation; Void leaving false clues in the code that could be misunderstood. For example: do not refer to a group of accounts as 'accountList' when the container holding the accounts is not actually a List. List has a specific meaning to programmers and using it incorrectly leads to false assumptions. Don't use names which vary in a subtle way. Rule 3. Make meaningful distinctions; Don't create bad, misspelled or meaningless names just to satisfy the compiler. For instance, the variable klass or clazz is often used because class is a reserved keyword in Java. If names must be different, they should also mean something different. Don't add noise words, distinguish names in such a way that the  reader knows what the differences offer. Rule 4. Use pronounceable names; The human brain has a significant part dedicated to the concept of words related to speech. Reading and understanding pronouncable words is much easier. Also, discussing code is much easier of names can be pronounced. Rule 5. Use searchable names; Single-letter names and numeric constants are hard to search for in a large body of text. Single letter names must only be used as local variables inside short methods. "The length of a name should correspond to the size of its cope". Rule 6. Member prefixes; don't use them, current editing environments are superior in highlighting local and member scoped variables. There is no need to add member prefixes anymore. Rule 7. Method names; Methods have verb or verb phrase names. Accessors, mutators and predicates should be named according to the javabean standard. Rule 8. Pick one word per concept; Pick one word for an abstract concept and use it consistently. Rule 9. Use solution domain names; People who read your code are programmers. It is OK to use computer science terms like algorithm names, pattern names, etc. (Visitor, Queue). Rule 10. Use problem domain names; Just do it. Rule 11. Add context; Few names are meaningful on their own. The naming hierarchy should have meaningful context. That is, method names should have meaning in the context of the class name.} 
+}
+
+@book{wittgenstein,
+  title={Philosophical investigations},
+  author={Wittgenstein, Ludwig},
+  year={1958},
+  publisher={Blackwell Oxford}
+}
+
+@article{fowler48567refactoring,
+  title={Refactoring: improving the design of existing code. 1999},
+  author={Fowler, Martin and Beck, Kent and Brant, John and Opdyke, William and Roberts, Don},
+  journal={ISBN: 0-201-48567-2},
+	year={1999}
+}
+
+@article{tsantalis2011identification,
+  title={Identification of extract method refactoring opportunities for the decomposition of methods},
+  author={Tsantalis, Nikolaos and Chatzigeorgiou, Alexander},
+  journal={Journal of Systems and Software},
+  volume={84},
+  number={10},
+  pages={1757--1782},
+  year={2011},
+  publisher={Elsevier}
+}
+
+article{murphy1996lightweight,
+  title={Lightweight structural summarization as an aid to software evolution},
+  author={Murphy, Gail C.},
+  year={1996},
+  publisher={Citeseer}
+}
+
+% Papers below are skipped, maybe become handy later on....
+
+inproceedings{simon2001metrics,
+  title={Metrics based refactoring},
+  author={Simon, Frank and Steinbruckner, Frank and Lewerentz, Claus},
+  booktitle={Software Maintenance and Reengineering, 2001. Fifth European Conference on},
+  pages={30--38},
+  year={2001},
+  organization={IEEE},
+	abstract={Besides normal maintenance (perfective, corrective and adaptive) there are additional reenginereing activities that are much harder to apply. These don't change external behavior of the software. The main goal is to improve the understandability and to simplify other reengineering activities. Fowler calls these activities Refactorings, which he defines as "a change made to the internal structure of software
+to make it easier to understand and cheaper to modify without changing its observable behaviour" ([Fowl99], p. 53). Fowler states that refactorings are based on "human intuition" and cannot be easily automated.
+This paper demonstrates how typical refactorings can be based on metrics. The refactorings are: Move Method, Move Attribute, Extract Class and Inline Class. Distance based cohesion is used to identify possible refactoring areas. A distance matrix is calculated to show the distance between entities. This matrix is mapped on to geometric objects in the Euclidean space. VRML files are generated from that which can be rendered in any VRML viewer. The result is a 3D world with objects in which you can 'walk'. Objects rendered closely together exhibit certain similarities according to the distance metric.}
+}
