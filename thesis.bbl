@@ -6,4 +6,9 @@ Ilja Heitlager, Tobias Kuipers, and Joost Visser.
 \newblock In {\em Quality of Information and Communications Technology, 2007.
   QUATIC 2007. 6th International Conference on the}, pages 30--39. IEEE, 2007.
 
+\bibitem{javaLangSpec}
+Oracle.
+\newblock Java language and virtual machine specification, 2015.
+\newblock \url{https://docs.oracle.com/javase/specs/}.
+
 \end{thebibliography}

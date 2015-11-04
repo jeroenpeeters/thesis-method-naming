@@ -34,6 +34,30 @@
 \usepackage[hidelinks]{hyperref}
 %\usepackage{minted}
 
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
 
 \begin{document}
 
@@ -41,7 +65,7 @@
 \title{Found in practice: Strategies for naming methods}
 \author{Jeroen Peeters
 \\The University of Amsterdam}
-\date{March 17, 2014 \\\vspace*{12.5cm}\small{Die Grenzen meiner Sprache bedeuten die Grenzen meiner Welt\\--- Ludwig Wittgenstein ---}} % The limits of my language mean the limits of my world
+\date{November 4, 2015 \\\vspace*{12.5cm}\small{Die Grenzen meiner Sprache bedeuten die Grenzen meiner Welt\\--- Ludwig Wittgenstein ---}} % The limits of my language mean the limits of my world
 \maketitle
 \thispagestyle{empty}
 \newpage
@@ -51,7 +75,6 @@
 Master Thesis \\
 Software Engineering \\
 \vspace{1cm}
-\hline
 
 \vspace{1cm}
 Supervisor: dr. Alexander Serebrenik\\
@@ -77,6 +100,7 @@ Supervisor: dr. Alexander Serebrenik\\
 \newpage
 
 \include{01-intro}
+\include{02-questions}
 \include{01-verification-model}
 \include{99-acknowledgement}
 
@@ -88,8 +112,8 @@ Supervisor: dr. Alexander Serebrenik\\
 
 \appendix
 
+\include{96-java-nameable-examples}
 \include{97-frequency-of-java-dependencies}
-\include{98-logbook}
 %\section{The First Appendix}
 %The appendix fragment is used only once. Subsequent appendices can be created
 %using the Section Section/Body Tag.

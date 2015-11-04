@@ -4,24 +4,33 @@
 
 Naming pieces of code is one of the most important tasks of a software developer. Giving a piece of code the correct name is important for understandability. But what is the right name? Providing good quality names is generally believed to be of high importance. Though there may be some guidelines, no exact or mechanical process exists to name pieces of code. This thesis seeks to discover the strategies people use to create names for existing pieces of code written in the Java programming language.
 
+\subsubsection{Names in the Java programming language}
+
+
+Before we continue we should understand which nameable parts exist the Java programming language.
+In the Java programming language the following constructs are nameable.\cite{javaLangSpec}
+
+\begin{list}{-}{}
+\item Classes
+\item Methods
+\item Variables
+\item Method arguments
+\item Return types
+\end{list}
+
+Examples of the above constructs are listed in appendix \ref{appendix:java-nameabe-examples}.
+
 \subsection{What's in a good name?}
 
 For computers to interpret and execute program code there is no need for it to be laid out or indented. Just the same the computer doesn't care about nice, well understandable and self-explanatory names. We do this to communicate the intent of the code to other developers or even our future self should we come back to extend the code or fix bugs.
 
-\subsubsection{Names in the Java programming language}
-
-\begin{list}{-}{Names in the Java programming language:}
-\item Classes
-\item Variables
-\item Methods
-\item Method arguments
-\end{list}
-
 \subsubsection{Name characteristics}
 
-\begin{list}{-}{Characteristics of names in programming.e:}
+\begin{list}{-}{Characteristics of names in programming:}
 \item Reveal intentions
 \item Length
+\item One word per concept
+\item Use names from the domain
 \end{list}
 
 
