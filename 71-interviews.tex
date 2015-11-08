@@ -1,0 +1,101 @@
+\section{Interviews}
+\label{appendix:interviews}
+
+
+\subsection{Interview A}
+
+\begin{listing}
+\caption{Commons IO 2.4 FilenameUtils.isSystemWindows Variant 1}
+\label{lst:filenameutils-issystemwindows-variant1}
+\begin{minted}{java}
+public class FilenameUtils {
+	...
+	/**
+	* Determines if Windows file system is in use.
+	* 
+	* @return true if the system is Windows
+	*/
+	static boolean ...() {
+		return SYSTEM_SEPARATOR == WINDOWS_SEPARATOR;
+	}
+	...
+}
+\end{minted}
+\end{listing}
+
+\begin{listing}
+\caption{Commons IO 2.4 FilenameUtils.isSystemWindows Variant 2}
+\label{lst:filenameutils-issystemwindows-variant2}
+\begin{minted}{java}
+public class FilenameUtils {
+	...
+	static boolean ...() {
+		return SYSTEM_SEPARATOR == WINDOWS_SEPARATOR;
+	}
+	...
+}
+\end{minted}
+\end{listing}
+
+\begin{listing}
+\caption{Commons IO 2.4 IOUtils.contentEqualsIgnoreEOL Variant 1}
+\label{lst:ioutils.contentequalsignoreeol-variant1}
+\begin{minted}{java}
+public class IOUtils {
+	...
+    /**
+     * Compare the contents of two Readers to determine if they are equal or
+     * not, ignoring EOL characters.
+     * <p>
+     * This method buffers the input internally using
+     * <code>BufferedReader</code> if they are not already buffered.
+     *
+     * @param input1  the first reader
+     * @param input2  the second reader
+     * @return true if the content of the readers are equal (ignoring EOL differences), 
+     *	false otherwise
+     * @throws NullPointerException if either input is null
+     * @throws IOException if an I/O error occurs
+     * @since 2.2
+     */
+    public static boolean ...(Reader input1, Reader input2)
+            throws IOException {
+        BufferedReader br1 = toBufferedReader(input1);
+        BufferedReader br2 = toBufferedReader(input2);
+
+        String line1 = br1.readLine();
+        String line2 = br2.readLine();
+        while (line1 != null && line2 != null && line1.equals(line2)) {
+            line1 = br1.readLine();
+            line2 = br2.readLine();
+        }
+        return line1 == null ? line2 == null ? true : false : line1.equals(line2);
+    }
+    ...
+}
+\end{minted}
+\end{listing}
+
+\begin{listing}
+\caption{Commons IO 2.4 IOUtils.contentEqualsIgnoreEOL Variant 2}
+\label{lst:ioutils.contentequalsignoreeol-variant1}
+\begin{minted}{java}
+public class IOUtils {
+	...
+    public static boolean ...(Reader input1, Reader input2)
+            throws IOException {
+        BufferedReader br1 = toBufferedReader(input1);
+        BufferedReader br2 = toBufferedReader(input2);
+
+        String line1 = br1.readLine();
+        String line2 = br2.readLine();
+        while (line1 != null && line2 != null && line1.equals(line2)) {
+            line1 = br1.readLine();
+            line2 = br2.readLine();
+        }
+        return line1 == null ? line2 == null ? true : false : line1.equals(line2);
+    }
+    ...
+}
+\end{minted}
+\end{listing}
