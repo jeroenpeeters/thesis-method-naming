@@ -135,7 +135,7 @@ public class Monitor {
 }
 
 // Usage example:
-monitor._();
+monitor._(5, TimeUnit.SECONDS);
 try {
 	// do things while occupying the monitor
 } finally {
@@ -178,3 +178,41 @@ public class Monitor {
 \caption{Guava 17.0 Monitor.enter Variant 2}
 \label{lst:guava-monitorenter-variant2}
 \end{code}
+
+\subsection{Questions to ask during the interview}
+
+\subsubsection{General questions before the interview}
+
+\begin{enumerate}
+\item Do you have practical experience with the Java programming language?
+\item If yes, how many years of experience do you have?
+\item With which other languages do you have practical experience?
+\end{enumerate}
+
+\subsubsection{Questions to ask per code sample}
+\begin{enumerate}
+\item Do you have experience with \textbf{**domain of code sample**}
+\item Do you understand and can you explain what this code does?
+\end{enumerate}
+
+\section{Interview script}
+
+\begin{enumerate}
+\item Please provide a name for the method with the missing name.
+
+\item When unable 
+	\begin{enumerate}
+	\item ask: Do you have experience/are familiar with \textbf{**domain of code sample**}
+	\item When negative: explain/provide reading material about the domain.
+	\item Please provide a name for the method with the missing name.
+	\item When unable, ask: Do you understand/can you explain what this code does?
+	\item When negative: give more contextual information
+	\item Repeat last two steps until all contextual information is provided.
+	\end{enumerate}
+\item When able
+	\begin{enumerate}
+	\item ask: Can you explain why you chose this particular name and how did you construct it?
+	\item ask: Do you have experience with \textbf{**domain of code sample**}
+	\item Do you understand and can you explain what this code does?
+	\end{enumerate}
+\end{enumerate}
