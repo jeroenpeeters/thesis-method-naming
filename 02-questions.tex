@@ -1,14 +1,38 @@
 \section{Research Question}
 
-\begin{itemize}
-	\item Question 1\\
-	{\small Description...}
-	
-	\item  Question 2\\
-	{\small Description...}
-	
+\begin{itemize}	
 	\item Can people reverse-engineer method names?\\
 	{\small Given a method implementation and contextual information, can people reconstruct the intent of that method and give it an appropriate name?}
 	
 		\subitem What is the minimal required information?
 \end{itemize}
+
+\subsection{Hypothesis}
+
+Hoe kom je tot hypothese: systematisch elementen van code. intentie als de primarre driver. intentie zit in naamgeving.
+
+\begin{enumerate}
+\item When given large samples of code, people mostly scan instead of reading thoroughly. Direct opvallende dingen. Sterke aanwijzing -> vuistregels. als er 1 duidelijke naam in staat zal die naam terugkomen in de naam. repeterende naam.
+\item When people are familiar with the domain they are able to provide better names.
+Mensen zonder kennis van het domein kunnen niet goed te intentie van de code achterhalen.
+meer afgaan op wat ipv waarom. 2. meer aandacht aan commentaar -> commentaar belangrijker. Meer moeite met grote methodes.
+
+\item Grote methods moeilijk naam te geven.
+
+
+\item When the intent of the code is not expressed in the code itself, it will be nearly impossible to provide a suitable name.
+\item vraag: in hoeverre komt naam van methode.. intentie van methode komt tot uidrukki ng in goede naamgeving van variabele en namen. Wanneer er een coherente naamgeving is, zal deze gebruikt worden in de naam.
+
+
+\item Code comments will be ignored, even though they express the intent of the code.
+\item Without providing context, simple code samples such as one liners, will be hard to name.
+\item Names given to pieces of code obtained by Extract-Method Refactoring are of better quality because it is a process the developer is familiar with.
+\item When the code exhibits common patterns with which the developer is familiar, he will answer the question from experience. \newline [BETER VERWOORDEN]
+\end{enumerate}
+
+
+Matrix met parameters
+
+toon classes, documentatie, grote methode. welke parameters ga ik varieren. mensen die commentaar niet gebruiken, ervaring met onbruikbaar commentaar.
+
+Frank Nack. Sander Bakkes. -> UXlab
