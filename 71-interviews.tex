@@ -4,9 +4,7 @@
 
 \subsection{Interview A}
 
-\begin{listing}
-\caption{Commons IO 2.4 FilenameUtils.isSystemWindows Variant 1}
-\label{lst:filenameutils-issystemwindows-variant1}
+\begin{code}
 \begin{minted}{java}
 public class FilenameUtils {
 	...
@@ -21,11 +19,11 @@ public class FilenameUtils {
 	...
 }
 \end{minted}
-\end{listing}
+\caption{Commons IO 2.4 FilenameUtils.isSystemWindows Variant 1}
+\label{lst:filenameutils-issystemwindows-variant1}
+\end{code}
 
-\begin{listing}
-\caption{Commons IO 2.4 FilenameUtils.isSystemWindows Variant 2}
-\label{lst:filenameutils-issystemwindows-variant2}
+\begin{code}
 \begin{minted}{java}
 public class FilenameUtils {
 	...
@@ -35,11 +33,11 @@ public class FilenameUtils {
 	...
 }
 \end{minted}
-\end{listing}
+\caption{Commons IO 2.4 FilenameUtils.isSystemWindows Variant 2}
+\label{lst:filenameutils-issystemwindows-variant2}
+\end{code}
 
-\begin{listing}
-\caption{Commons IO 2.4 IOUtils.contentEqualsIgnoreEOL Variant 1}
-\label{lst:ioutils.contentequalsignoreeol-variant1}
+\begin{code}
 \begin{minted}{java}
 public class IOUtils {
 	...
@@ -74,11 +72,11 @@ public class IOUtils {
     ...
 }
 \end{minted}
-\end{listing}
-
-\begin{listing}
-\caption{Commons IO 2.4 IOUtils.contentEqualsIgnoreEOL Variant 2}
+\caption{Commons IO 2.4 IOUtils.contentEqualsIgnoreEOL Variant 1}
 \label{lst:ioutils.contentequalsignoreeol-variant1}
+\end{code}
+
+\begin{code}
 \begin{minted}{java}
 public class IOUtils {
 	...
@@ -98,4 +96,85 @@ public class IOUtils {
     ...
 }
 \end{minted}
-\end{listing}
+\caption{Commons IO 2.4 IOUtils.contentEqualsIgnoreEOL Variant 2}
+\label{lst:ioutils.contentequalsignoreeol-variant1}
+\end{code}
+
+\newpage
+\begin{code}
+\begin{minted}{java}
+public class Monitor {
+/**
+   * Enters this monitor. Blocks at most the given time.
+   *
+   * @return whether the monitor was entered
+   */
+  public boolean _(long time, TimeUnit unit) {
+    long timeoutNanos = unit.toNanos(time);
+    final ReentrantLock lock = this.lock;
+    if (!fair && lock.tryLock()) {
+      return true;
+    }
+    long deadline = System.nanoTime() + timeoutNanos;
+    boolean interrupted = Thread.interrupted();
+    try {
+      while (true) {
+        try {
+          return lock.tryLock(timeoutNanos, TimeUnit.NANOSECONDS);
+        } catch (InterruptedException interrupt) {
+          interrupted = true;
+          timeoutNanos = deadline - System.nanoTime();
+        }
+      }
+    } finally {
+      if (interrupted) {
+        Thread.currentThread().interrupt();
+      }
+    }
+  }
+}
+
+// Usage example:
+monitor._();
+try {
+	// do things while occupying the monitor
+} finally {
+	monitor.leave();
+}
+\end{minted}
+\caption{Guava 17.0 Monitor.enter Variant 1}
+\label{lst:guava-monitorenter-variant1}
+\end{code}
+
+\newpage
+\begin{code}
+\begin{minted}{java}
+public class Monitor {
+  public boolean _(long time, TimeUnit unit) {
+    long timeoutNanos = unit.toNanos(time);
+    final ReentrantLock lock = this.lock;
+    if (!fair && lock.tryLock()) {
+      return true;
+    }
+    long deadline = System.nanoTime() + timeoutNanos;
+    boolean interrupted = Thread.interrupted();
+    try {
+      while (true) {
+        try {
+          return lock.tryLock(timeoutNanos, TimeUnit.NANOSECONDS);
+        } catch (InterruptedException interrupt) {
+          interrupted = true;
+          timeoutNanos = deadline - System.nanoTime();
+        }
+      }
+    } finally {
+      if (interrupted) {
+        Thread.currentThread().interrupt();
+      }
+    }
+  }
+}
+\end{minted}
+\caption{Guava 17.0 Monitor.enter Variant 2}
+\label{lst:guava-monitorenter-variant2}
+\end{code}
