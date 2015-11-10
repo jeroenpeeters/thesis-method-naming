@@ -31,9 +31,11 @@
 \usepackage{varwidth} % http://ctan.org/pkg/varwidth
 \usepackage{pgfgantt}
 \usepackage{graphicx} % http://nl.wikibooks.org/wiki/LaTeX/Figuren_en_drijvende_omgevingen
+\usepackage[titletoc,title]{appendix}
 \usepackage[hidelinks]{hyperref}
 \usepackage{minted}
 \usepackage{caption}
+\usepackage{multirow,tabularx}
 
 \setminted[java]{linenos=true,tabsize=4,style=colorful}
 
@@ -91,11 +93,14 @@ Supervisor: dr. Alexander Serebrenik\\
 \bibliography{mybib}{}
 \bibliographystyle{plain}
 
-\appendix
+%\appendix
 
+\begin{appendices}
+\chapter{Some Appendix}
 \include{70-java-nameable-examples}
 \include{71-interviews}
 \include{97-frequency-of-java-dependencies}
+\end{appendices}
 %\section{The First Appendix}
 %The appendix fragment is used only once. Subsequent appendices can be created
 %using the Section Section/Body Tag.
