@@ -1,15 +1,14 @@
 \section{Research Question}
 
-\begin{itemize}	
-	\item Can people reverse-engineer method names?\\
-	{\small Given a method implementation and contextual information, can people reconstruct the intent of that method and give it an appropriate name?}
-	
-		\subitem What is the minimal required information?
-\end{itemize}
+\subsection{Can people reverse-engineer method names?}
+Given a method implementation and contextual information, can people reconstruct the intent of that method and give it an appropriate name? What is the minimal required amount and type of information?
+
+\subsection{What are the strategies people employ to infer a method name?}
+When people are given the task to create an appropriate names for a given method implementation and its context, what strategies do they follow? 
 
 \subsection{Hypothesis}
 
-The main driver of the hypotheses is the intent of the code. The intent of the code primarily exhibits in the names. Therefore the hypotheses are grouped per characteristic (\ref{sec:name-characteristics}).
+The main driver of the hypotheses is the intent of the code. The intent of the code primarily exhibits in the names {\color{red}[CITATION NEEDED]}. Therefore the hypotheses are grouped per characteristic (\ref{sec:name-characteristics}).
 %The main driver behind the hypotheses are the name characteristics  (see %\ref{sec:name-characteristics}). The hypotheses are therefore grouped per characteristic.
 
 %Hoe kom je tot hypothese: systematisch elementen van code. intentie als de primarre driver. intentie zit in naamgeving.
@@ -21,6 +20,9 @@ The main driver of the hypotheses is the intent of the code. The intent of the c
 \end{enumerate}
 
 \subsubsection{Length}
+\begin{enumerate}
+\item The size of the method is positively related to the length of the method name. People will give larger names to methods with a bigger size.
+\end{enumerate}
 
 \subsubsection{One word per concept}
 \begin{enumerate}
@@ -34,7 +36,7 @@ The main driver of the hypotheses is the intent of the code. The intent of the c
 \item People without domain knowledge will have more difficulties naming larger and complex methods.
 \end{enumerate}
 
-\begin{enumerate}
+
 %\item When given large samples of code, people mostly scan instead of reading thoroughly. Direct opvallende dingen. Sterke aanwijzing -> vuistregels. als er 1 duidelijke naam in staat zal die naam terugkomen in de naam. repeterende naam.
 %\item When people are familiar with the domain they are able to provide better names.
 %Mensen zonder kennis van het domein kunnen niet goed te intentie van de code achterhalen.
@@ -49,10 +51,14 @@ The main driver of the hypotheses is the intent of the code. The intent of the c
 
 %\item Code comments will be ignored, even though they express the intent of the code.
 %\item Without providing context, simple code samples such as one liners, will be hard to name.
+\subsubsection{Patterns}
+Program code exhibiting common patterns is generally easier to understand when the developer is familiar with these patterns. {\color{red}[CITATION NEEDED]}.
+\begin{enumerate}
 \item Names given to pieces of code obtained by Extract-Method Refactoring are of better quality because it is a process the developer is familiar with.
 \item When the code exhibits common patterns with which the developer is familiar, he will answer the question from experience. \newline [BETER VERWOORDEN]
 \end{enumerate}
 
+\subsection{Hypothesis Parameter Variability Matrix}
 
 \begin{tabular}{ *5l }
 \emph{Hypothesis} & \multicolumn{4}{l}{\emph{Parameter variation}} \\
