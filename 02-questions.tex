@@ -14,27 +14,46 @@ The main driver of the hypotheses is the intent of the code. The intent of the c
 %Hoe kom je tot hypothese: systematisch elementen van code. intentie als de primarre driver. intentie zit in naamgeving.
 
 \subsubsection{Reveal intentions}
-\begin{enumerate}
-\item When the code is simple and uses coherent names, comments will be ignored.
-\item Smaller methods, such as one liners, are missing context. Without this context it will be impossible to get the intent and thus provide an appropriate name.
-\end{enumerate}
+\begin{subhyp}
+	\begin{hyp}
+ 		When the code is simple and uses coherent names, comments will be ignored.
+	\end{hyp}
+	\begin{hyp}
+ 		Smaller methods, such as one liners, are missing context. Without this context it will be impossible to get the intent and thus provide an appropriate name.
+	\end{hyp}
+\end{subhyp}
+
 
 \subsubsection{Length}
-\begin{enumerate}
-\item The size of the method is positively related to the length of the method name. People will give larger names to methods with a bigger size.
-\end{enumerate}
+\begin{subhyp}
+	\begin{hyp}
+		The size of the method is positively related to the length of the method name. People will give larger names to methods with a bigger size.
+	\end{hyp}
+\end{subhyp}
+
+\subsubsection{Complexity}
+\begin{subhyp}
+	\begin{hyp}
+		The complexity of a method is negatively related to ability of people to give a method a sensible name. The more complex a method, the harder to name the method, if possible at all. 
+	\end{hyp}
+\end{subhyp}
 
 \subsubsection{One word per concept}
-\begin{enumerate}
-\item When the code exhibits obvious and coherent names these names will be re-used in the method name.
-\end{enumerate}
+\begin{subhyp}
+	\begin{hyp}
+		When the code exhibits obvious and coherent names these names will be re-used in the method name.
+	\end{hyp}
+\end{subhyp}
 
 \subsubsection{Use names from the domain}
-\begin{enumerate}
-\item People without domain knowledge will not be able to grasp the intent of the code. They will rely more on context, such as comments, than what the code actually expresses.
-
-\item People without domain knowledge will have more difficulties naming larger and complex methods.
-\end{enumerate}
+\begin{subhyp}
+	\begin{hyp}
+		People without domain knowledge will not be able to grasp the intent of the code. They will rely more on context, such as comments, than what the code actually expresses.
+	\end{hyp}
+	\begin{hyp}
+		People without domain knowledge will have more difficulties naming larger and complex methods.
+	\end{hyp}
+\end{subhyp}
 
 
 %\item When given large samples of code, people mostly scan instead of reading thoroughly. Direct opvallende dingen. Sterke aanwijzing -> vuistregels. als er 1 duidelijke naam in staat zal die naam terugkomen in de naam. repeterende naam.
@@ -53,17 +72,22 @@ The main driver of the hypotheses is the intent of the code. The intent of the c
 %\item Without providing context, simple code samples such as one liners, will be hard to name.
 \subsubsection{Patterns}
 Program code exhibiting common patterns is generally easier to understand when the developer is familiar with these patterns. {\color{red}[CITATION NEEDED]}.
-\begin{enumerate}
-\item Names given to pieces of code obtained by Extract-Method Refactoring are of better quality because it is a process the developer is familiar with.
-\item When the code exhibits common patterns with which the developer is familiar, he will answer the question from experience. \newline [BETER VERWOORDEN]
-\end{enumerate}
+\begin{subhyp}
+	\begin{hyp}
+		Names given to pieces of code obtained by Extract-Method Refactoring are of better quality because it is a process the developer is familiar with.
+	\end{hyp}
+	\begin{hyp}
+		When the code exhibits common patterns with which the developer is familiar, he will answer the question from experience. \newline [BETER VERWOORDEN]
+	\end{hyp}
+\end{subhyp}
+
 
 \subsection{Hypothesis Parameter Variability Matrix}
 
 \begin{tabular}{ *5l }
 \emph{Hypothesis} & \multicolumn{4}{l}{\emph{Parameter variation}} \\
 \hline
-   & Method Javadoc  & Method call example  & C  & D  \\ 
+   & Javadoc  & Call example  & Size  & Complexity \\ 
 H1 & X1 & X2 & X3 & X4 \\ 
 H2 & Y1 & Y2 & Y3 & Y4 \\
 H3 & Y1 & Y2 & Y3 & Y4 \\
